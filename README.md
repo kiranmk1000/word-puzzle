@@ -12,8 +12,8 @@ A Laravel-based API for a word puzzle game where players can generate puzzles, s
 
 ## Technical Stack
 
--   PHP 8.1+
--   Laravel 10.x
+-   PHP 8.2+
+-   Laravel 12.x
 -   MySQL/MariaDB
 -   RESTful API architecture
 
@@ -58,7 +58,7 @@ php artisan key:generate
 
 4. Configure database in `.env`:
 
-```
+```bash
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
