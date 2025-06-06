@@ -3,6 +3,10 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use App\Services\Interfaces\WordSubmissionServiceInterface;
+use App\Services\Interfaces\PuzzleServiceInterface;
+use App\Services\WordSubmissionService;
+use App\Services\PuzzleService;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -11,7 +15,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $this->app->bind(PuzzleServiceInterface::class, PuzzleService::class);
+        $this->app->bind(WordSubmissionServiceInterface::class, WordSubmissionService::class);
     }
 
     /**
